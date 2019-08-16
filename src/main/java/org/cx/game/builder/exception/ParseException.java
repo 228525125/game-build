@@ -6,11 +6,11 @@ public class ParseException extends Exception {
 
 	public ParseException() {
 		// TODO Auto-generated constructor stub
-		super(I18n.getMessage("org.cx.game.exception.ParseException"));
+		super(I18n.getMessage("org.cx.game.builder.exception.ParseException"));
 	}
 	
 	public ParseException(String description) {
 		// TODO Auto-generated constructor stub
-		super(I18n.getMessage("org.cx.game.exception.ParseException")+";"+I18n.getMessage(description));
+		super(I18n.getMessage(description));
 	}
 }

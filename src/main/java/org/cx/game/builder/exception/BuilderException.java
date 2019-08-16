@@ -6,11 +6,11 @@ public class BuilderException extends Exception {
 
 	public BuilderException() {
 		// TODO Auto-generated constructor stub
-		super(I18n.getMessage("org.cx.game.exception.BuilderException"));
+		super(I18n.getMessage("org.cx.game.builder.exception.BuilderException"));
 	}
 	
 	public BuilderException(String description) {
 		// TODO Auto-generated constructor stub
-		super(I18n.getMessage("org.cx.game.exception.BuilderException")+";"+I18n.getMessage(description));
+		super(I18n.getMessage(description));
 	}
 }
