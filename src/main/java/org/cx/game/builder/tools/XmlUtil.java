@@ -1,5 +1,9 @@
 package org.cx.game.builder.tools;
 
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.Map;
+
 public class XmlUtil {
 
 	public final static String Attribute_Type = "type";
@@ -13,6 +17,7 @@ public class XmlUtil {
 	public final static String Attribute_Value_Str = "str";
 	public final static String Attribute_Value_Double = "double";
 	public final static String Attribute_Value_Bool = "bool";
+	public final static String Attribute_Value_Long = "long";
 	
 	public final static String Element_FactoryMethodParameter = "factoryMethodParameter";
 	public final static String Element_Parameter = "parameter";
@@ -33,6 +38,24 @@ public class XmlUtil {
             return false; 
         }
     }
+	
+	/**
+	 * 判断是否为Collection类型
+	 * @param cls
+	 * @return
+	 */
+	public static boolean isCollection(Class cls) {
+		return Collection.class.isAssignableFrom(cls);
+	}
+	
+	/**
+	 * 判断是否为Map类型
+	 * @param cls
+	 * @return
+	 */
+	public static boolean isMap(Class cls) {
+		return Map.class.isAssignableFrom(cls) || HashMap.class.isAssignableFrom(cls);
+	}
 	
 	/**
 	 * 首字大写

@@ -127,6 +127,8 @@ public class ObjectTypeParse implements IParse {
 			return Double.class;
 		}else if(XmlUtil.Attribute_Value_Bool.equals(className)){
 			return Boolean.class;
+		}else if(XmlUtil.Attribute_Value_Long.equals(className)){
+			return Long.class;
 		}
 		try {
 			return Class.forName(className);

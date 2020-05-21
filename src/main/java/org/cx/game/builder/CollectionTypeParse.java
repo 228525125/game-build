@@ -44,6 +44,14 @@ public class CollectionTypeParse implements IParse {
 				BasicTypeBuilder btb = new BasicTypeBuilder();
 				new BasicTypeParse(btb).parse(el);
 				builder.add(btb.builder());
+			}else if(XmlUtil.isCollection(cls)){    //Collection
+				CollectionTypeBuilder ctb = new CollectionTypeBuilder();
+				new CollectionTypeParse(ctb).parse(el);
+				builder.add(ctb.builder());
+			}else if(XmlUtil.isMap(cls)){    //Map
+				MapTypeBuilder mtb = new MapTypeBuilder();
+				new MapTypeParse(mtb).parse(el);
+				builder.add(mtb.builder());
 			}else{
 				ObjectTypeBuilder otb = new ObjectTypeBuilder();
 				new ObjectTypeParse(otb).parse(el);
